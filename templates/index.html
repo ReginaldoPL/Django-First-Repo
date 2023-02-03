@@ -8,6 +8,13 @@
     Details: {{feature.details}}<br />
     {% if feature.is_true == True %}
         <p>This Feature is true</p>
+    {% comment %} 
+        {% elif feature.is_true == False %}
+        <p>This Feature is false</p> 
+    {% endcomment %}
+    {% else %}
+        <p>This Feature is false</p>
+
     {% endif%}
     <hr>
 {% endfor %}
