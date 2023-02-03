@@ -6,6 +6,9 @@
     ID: {{feature.id}} <br />
     Feature: {{feature.name}}   <br />
     Details: {{feature.details}}<br />
+    {% if feature.is_true == True %}
+        <p>This Feature is true</p>
+    {% endif%}
     <hr>
 {% endfor %}
 
