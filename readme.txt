@@ -27,3 +27,5 @@ deactivate
 #rodar o app
 	python manage.py runserver
 
+# make miogration
+	python manage.py makemigrations
