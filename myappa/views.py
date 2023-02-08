@@ -2,17 +2,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Feature
 
-def createFeatures():
-    
-    
-    features = []
-    
-    return features
     
 # Create your views here.
 def index(request): 
     
-    features = createFeatures()
+    features = Feature.objects.all()
     return render(request, 'index.html', {'features': features})
     #return HttpResponse('<h1> Hey, Welcome</h1')
 def counter(request):
