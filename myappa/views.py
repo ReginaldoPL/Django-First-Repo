@@ -11,6 +11,24 @@ def index(request):
     features = Feature.objects.all()
     return render(request, 'index.html', {'features': features})
     #return HttpResponse('<h1> Hey, Welcome</h1')
+    
+def login(request): 
+    if request.method=='POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        
+        user = auth.authenticate(username=username, password=password)
+        
+        if user is not None:
+            auth.login(request, user)
+            return redirect('/')
+        else:
+            messages.info(request, 'Credentials Invalid')
+            return redirect('login')
+    else:
+        return render(request, 'login.html',)    
+    
+    
 def register(request):
     if request.method =='POST':
         username = request.POST['username']
