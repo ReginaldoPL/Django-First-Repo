@@ -2,6 +2,10 @@
 
 <link rel="stylesheet" href="{% static 'style.css' %}">
 
+{% if user.is_authenticated %}
+<h1>Welcome, {{user.username}}</h1>
+{% endif %}
+
 {% for feature in features %}
     ID: {{feature.id}} <br />
     Feature: {{feature.name}}   <br />
