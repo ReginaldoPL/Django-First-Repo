@@ -1,3 +1,7 @@
+##about requirements.txt
+	pip freeze > requirements.txt
+	pip install -r requirements.txt
+
 ###Python env
 
 #install
@@ -29,3 +33,12 @@ deactivate
 
 # make miogration
 	python manage.py makemigrations
+
+
+
+#To use postgres, intall:
+	pip install psycopg2		
+	pip install Pillow
+
+# atualizar o pip
+	python.exe -m pip install --upgrade pip	

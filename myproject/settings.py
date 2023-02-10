@@ -84,6 +84,18 @@ DATABASES = {
     }
 }
 
+# https://youtu.be/jBzwzrDvZ18?t=24260
+# DATABASES = {
+#      'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME':  'myproject',
+#         'USER':  'postgres',
+#         'PASSWORD':'ABC',
+#         'HOST':'localhost'
+#     }
+# }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
