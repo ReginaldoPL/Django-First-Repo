@@ -4,6 +4,9 @@
 
 {% if user.is_authenticated %}
 <h1>Welcome, {{user.username}}</h1>
+<p><a href="logout">Logout</a></p>
+{% else %}
+<p><a href="login">Login or Signup</a></p>
 {% endif %}
 
 {% for feature in features %}
